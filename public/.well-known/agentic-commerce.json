@@ -1,0 +1,79 @@
+{
+  "@context": "https://npci.org.in/schemas/agentic-commerce/v1",
+  "@type": "MerchantCatalogService",
+  "version": "1.0.0",
+  "name": "MerchantAI Catalog API",
+  "description": "Agent-readable product catalog with Razorpay-verified pricing for autonomous AI commerce",
+  "provider": {
+    "name": "MerchantAI",
+    "url": "http://localhost:3000",
+    "supportedProtocols": ["UAP", "ACP", "AP2", "x402"]
+  },
+  "capabilities": {
+    "naturalLanguageQuery": true,
+    "structuredSearch": true,
+    "priceVerification": true,
+    "stockCheck": true,
+    "intelligentAlternatives": true,
+    "securityGating": true,
+    "auditTrail": true,
+    "multiMerchantDiscovery": true,
+    "liveOrderCreation": true
+  },
+  "endpoints": {
+    "catalog": {
+      "url": "http://localhost:3000/api/catalog/query",
+      "method": "POST",
+      "description": "Query products using natural language or structured filters",
+      "authentication": "none",
+      "rateLimit": "100 requests/minute"
+    },
+    "multiMerchantSearch": {
+      "url": "http://localhost:3000/api/catalog/multi-merchant/search",
+      "method": "POST",
+      "description": "Real-time discovery across Amazon, Flipkart, and Direct D2C merchants with live price comparison",
+      "authentication": "none",
+      "features": ["price_arbitrage", "merchant_ranking", "schema_normalization"]
+    },
+    "agentOrder": {
+      "url": "http://localhost:3000/api/catalog/agent-order",
+      "method": "POST",
+      "description": "Create bounded Razorpay transaction order for autonomous AI buyer agents",
+      "authentication": "razorpay_test_key",
+      "security": "Price tampering gate + audit logging"
+    },
+    "productDetails": {
+      "url": "http://localhost:3000/api/catalog/product/{id}",
+      "method": "GET",
+      "description": "Get detailed product information in Schema.org format"
+    },
+    "priceVerification": {
+      "url": "http://localhost:3000/api/catalog/verify-price",
+      "method": "POST",
+      "description": "Verify product price and availability with Razorpay before purchase",
+      "security": "Price tampering detection enabled"
+    },
+    "alternatives": {
+      "url": "http://localhost:3000/api/catalog/product/{id}/alternative",
+      "method": "GET",
+      "description": "Get intelligent alternative for out-of-stock items"
+    }
+  },
+  "schemas": {
+    "product": "https://schema.org/Product",
+    "offer": "https://schema.org/Offer",
+    "brand": "https://schema.org/Brand"
+  },
+  "paymentIntegration": {
+    "provider": "Razorpay",
+    "mode": "test",
+    "features": ["price_verification", "order_creation", "audit_logging"]
+  },
+  "security": {
+    "priceTamperingDetection": true,
+    "auditLogging": true,
+    "boundedMoneyActions": true,
+    "failureHandling": "graceful"
+  },
+  "updatedAt": "2026-09-04T06:59:54.486Z"
+}

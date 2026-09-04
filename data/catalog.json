@@ -1,0 +1,200 @@
+[
+  {
+    "id": "prod_001",
+    "name": "Sony WH-1000XM5 Wireless Noise-Canceling Headphones",
+    "category": "Electronics",
+    "subCategory": "Audio",
+    "brand": "Sony",
+    "price": {
+      "amount": 26990,
+      "currency": "INR",
+      "displayPrice": "₹26,990"
+    },
+    "stock": {
+      "available": true,
+      "quantity": 15
+    },
+    "attributes": {
+      "type": "over-ear",
+      "wireless": true,
+      "batteryLife": "30 hours",
+      "noiseCancellation": true,
+      "color": "Black",
+      "microphone": true,
+      "bluetoothVersion": "5.2"
+    },
+    "semanticTags": [
+      "wireless headphones",
+      "noise cancelling",
+      "premium audio",
+      "over ear headphones",
+      "sony headphones",
+      "travel headphones",
+      "office headset"
+    ],
+    "description": "Industry-leading active noise cancellation with 8 microphones, 30-hour battery life, speak-to-chat technology, and ultra-comfortable lightweight design."
+  },
+  {
+    "id": "prod_002",
+    "name": "boAt Rockerz 450 Bluetooth On-Ear Headphones",
+    "category": "Electronics",
+    "subCategory": "Audio",
+    "brand": "boAt",
+    "price": {
+      "amount": 1499,
+      "currency": "INR",
+      "displayPrice": "₹1,499"
+    },
+    "stock": {
+      "available": true,
+      "quantity": 50
+    },
+    "attributes": {
+      "type": "on-ear",
+      "wireless": true,
+      "batteryLife": "15 hours",
+      "noiseCancellation": false,
+      "color": "Luscious Black",
+      "microphone": true,
+      "bluetoothVersion": "5.0"
+    },
+    "semanticTags": [
+      "budget headphones",
+      "wireless headphones under 2000",
+      "boat rockerz",
+      "daily use headphones",
+      "bass headphones"
+    ],
+    "description": "Affordable on-ear wireless headphones with 40mm dynamic drivers, punchy HD bass, 15 hours playback, and comfortable padded ear cushions."
+  },
+  {
+    "id": "prod_003",
+    "name": "Apple AirPods Pro (2nd Generation)",
+    "category": "Electronics",
+    "subCategory": "Audio",
+    "brand": "Apple",
+    "price": {
+      "amount": 24900,
+      "currency": "INR",
+      "displayPrice": "₹24,900"
+    },
+    "stock": {
+      "available": true,
+      "quantity": 8
+    },
+    "attributes": {
+      "type": "in-ear earbuds",
+      "wireless": true,
+      "batteryLife": "6 hours (30 with case)",
+      "noiseCancellation": true,
+      "color": "White",
+      "microphone": true,
+      "waterResistance": "IPX4"
+    },
+    "semanticTags": [
+      "airpods",
+      "apple earbuds",
+      "true wireless",
+      "anc earbuds",
+      "iphone accessories",
+      "premium earbuds"
+    ],
+    "description": "Next-level active noise cancellation, adaptive transparency, personalized spatial audio with dynamic head tracking, and MagSafe charging case with USB-C."
+  },
+  {
+    "id": "prod_004",
+    "name": "Keychron K2 Wireless Mechanical Keyboard",
+    "category": "Electronics",
+    "subCategory": "Peripherals",
+    "brand": "Keychron",
+    "price": {
+      "amount": 7999,
+      "currency": "INR",
+      "displayPrice": "₹7,999"
+    },
+    "stock": {
+      "available": true,
+      "quantity": 20
+    },
+    "attributes": {
+      "switchType": "Gateron Brown",
+      "layout": "75% compact (84 keys)",
+      "connectivity": ["Bluetooth 5.1", "USB-C wired"],
+      "backlight": "RGB",
+      "compatibleOS": ["Mac", "Windows", "Linux", "iOS", "Android"],
+      "battery": "4000mAh"
+    },
+    "semanticTags": [
+      "mechanical keyboard",
+      "wireless keyboard",
+      "mac mechanical keyboard",
+      "developer keyboard",
+      "compact keyboard"
+    ],
+    "description": "A 75% layout compact Bluetooth mechanical keyboard engineered for Mac and Windows. Connects up to 3 devices with seamless switching."
+  },
+  {
+    "id": "prod_005",
+    "name": "Logitech MX Master 3S Wireless Performance Mouse",
+    "category": "Electronics",
+    "subCategory": "Peripherals",
+    "brand": "Logitech",
+    "price": {
+      "amount": 9495,
+      "currency": "INR",
+      "displayPrice": "₹9,495"
+    },
+    "stock": {
+      "available": false,
+      "quantity": 0
+    },
+    "attributes": {
+      "sensor": "8K DPI Darkfield",
+      "clicks": "Quiet clicks (90% noise reduction)",
+      "scrollWheel": "MagSpeed electromagnetic",
+      "connectivity": ["Bluetooth", "Logi Bolt USB receiver"],
+      "battery": "Up to 70 days on full charge",
+      "ergonomic": true
+    },
+    "semanticTags": [
+      "ergonomic mouse",
+      "coding mouse",
+      "designer mouse",
+      "quiet mouse",
+      "logitech mx",
+      "productivity mouse"
+    ],
+    "description": "An iconic precision mouse remastered with Quiet Clicks, 8K DPI tracking on any surface including glass, and ultra-fast MagSpeed scrolling."
+  },
+  {
+    "id": "prod_006",
+    "name": "Anker 737 Power Bank (PowerCore 24K)",
+    "category": "Electronics",
+    "subCategory": "Accessories",
+    "brand": "Anker",
+    "price": {
+      "amount": 13999,
+      "currency": "INR",
+      "displayPrice": "₹13,999"
+    },
+    "stock": {
+      "available": true,
+      "quantity": 12
+    },
+    "attributes": {
+      "capacity": "24000mAh",
+      "outputPower": "140W max",
+      "ports": ["2x USB-C", "1x USB-A"],
+      "display": "Smart digital display",
+      "chargingTech": "Power Delivery 3.1"
+    },
+    "semanticTags": [
+      "laptop power bank",
+      "fast charging power bank",
+      "anker powercore",
+      "travel charger",
+      "high capacity battery"
+    ],
+    "description": "Ultra-powerful 140W two-way fast charging power bank with smart digital display, capable of charging laptops, phones, and tablets simultaneously."
+  }
+]

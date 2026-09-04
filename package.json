@@ -1,0 +1,23 @@
+{
+  "name": "merchantai-catalog",
+  "version": "1.0.0",
+  "description": "AI-Readable Product Catalog API for Agent-to-Agent Commerce | Razorpay AI Buildathon 2026",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "demo": "node demo-agent.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["ai-commerce", "agentic-commerce", "razorpay", "catalog-api", "ai-agents"],
+  "author": "Your Name",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "morgan": "^1.12.0",
+    "razorpay": "^2.9.8",
+    "uuid": "^14.0.2"
+  }
+}
