@@ -23,7 +23,11 @@ class AuditLogger {
 
     const logLine = JSON.stringify(logEntry) + '\n';
 
-    fs.appendFileSync(this.logFile, logLine, 'utf8');
+    try {
+      fs.appendFileSync(this.logFile, logLine, 'utf8');
+    } catch (e) {
+      console.error('AuditLogger write error:', e);
+    }
     console.log(`[AUDIT] ${eventType}:`, data);
 
     return logEntry;
@@ -52,21 +56,24 @@ class AuditLogger {
     });
   }
 
-  logAgentAction(agentId, action, productId, result) {
+  logAgentAction(agentId, action, details) {
     return this.log('AGENT_ACTION', {
       agentId,
       action,
-      productId,
-      result
+      ...details
     });
   }
 
   getLogs(limit = 100) {
     try {
+      if (!fs.existsSync(this.logFile)) return [];
       const logs = fs.readFileSync(this.logFile, 'utf8')
         .split('\n')
         .filter(line => line.trim())
-        .map(line => JSON.parse(line))
+        .map(line => {
+          try { return JSON.parse(line); } catch (e) { return null; }
+        })
+        .filter(Boolean)
         .slice(-limit);
       return logs;
     } catch (error) {

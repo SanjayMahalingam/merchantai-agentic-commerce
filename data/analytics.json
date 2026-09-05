@@ -1,0 +1,66 @@
+{
+  "totalSearches": 148,
+  "recommendationsServed": 398,
+  "cartAdditions": 90,
+  "conversions": 34,
+  "totalRevenue": 882885,
+  "avgOrderValue": 25967,
+  "topSearches": [
+    {
+      "query": "best phone under ₹30,000",
+      "count": 4
+    },
+    {
+      "query": "best phone under 30000",
+      "count": 50
+    },
+    {
+      "query": "noise cancelling headphones",
+      "count": 35
+    },
+    {
+      "query": "mechanical keyboard for mac",
+      "count": 22
+    },
+    {
+      "query": "budget smartwatch",
+      "count": 19
+    },
+    {
+      "query": "lightweight laptop",
+      "count": 18
+    }
+  ],
+  "topCategories": [
+    {
+      "name": "Smartphones",
+      "views": 180,
+      "orders": 15
+    },
+    {
+      "name": "Audio",
+      "views": 145,
+      "orders": 11
+    },
+    {
+      "name": "Peripherals",
+      "views": 95,
+      "orders": 5
+    },
+    {
+      "name": "Laptops",
+      "views": 62,
+      "orders": 2
+    },
+    {
+      "name": "Wearables",
+      "views": 48,
+      "orders": 1
+    }
+  ],
+  "securityStats": {
+    "tamperAttemptsBlocked": 9,
+    "highRiskOrdersFlagged": 2,
+    "substitutionsSuggested": 15
+  }
+}

@@ -2,199 +2,822 @@
   {
     "id": "prod_001",
     "name": "Sony WH-1000XM5 Wireless Noise-Canceling Headphones",
-    "category": "Electronics",
-    "subCategory": "Audio",
+    "category": "Audio",
+    "subCategory": "Headphones",
     "brand": "Sony",
     "price": {
       "amount": 26990,
+      "mrp": 34990,
       "currency": "INR",
-      "displayPrice": "₹26,990"
+      "displayPrice": "₹26,990",
+      "discountPercent": 23
     },
     "stock": {
       "available": true,
-      "quantity": 15
+      "quantity": 29,
+      "lowStockThreshold": 5
     },
+    "rating": {
+      "score": 4.8,
+      "reviewsCount": 2420
+    },
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
     "attributes": {
-      "type": "over-ear",
+      "type": "Over-Ear",
       "wireless": true,
       "batteryLife": "30 hours",
       "noiseCancellation": true,
       "color": "Black",
       "microphone": true,
-      "bluetoothVersion": "5.2"
+      "bluetoothVersion": "5.2",
+      "fastCharging": "3 min charge = 3 hours playback"
     },
+    "features": [
+      "Industry-leading ANC with 8 microphones & Auto NC Optimizer",
+      "Up to 30 hours battery life with quick charging",
+      "Crystal clear hands-free calling with AI beamforming mics",
+      "Multi-point connection to switch between 2 devices seamlessly"
+    ],
     "semanticTags": [
       "wireless headphones",
       "noise cancelling",
+      "anc",
       "premium audio",
-      "over ear headphones",
       "sony headphones",
       "travel headphones",
+      "audiophile",
       "office headset"
     ],
-    "description": "Industry-leading active noise cancellation with 8 microphones, 30-hour battery life, speak-to-chat technology, and ultra-comfortable lightweight design."
+    "description": "Sony's flagship wireless headphones with industry-leading active noise cancellation, lightweight carbon fiber drivers, and 30-hour battery life for elite sound quality.",
+    "qualityScore": 98,
+    "sellerId": "seller_official_sony"
   },
   {
     "id": "prod_002",
     "name": "boAt Rockerz 450 Bluetooth On-Ear Headphones",
-    "category": "Electronics",
-    "subCategory": "Audio",
+    "category": "Audio",
+    "subCategory": "Headphones",
     "brand": "boAt",
     "price": {
       "amount": 1499,
+      "mrp": 3990,
       "currency": "INR",
-      "displayPrice": "₹1,499"
+      "displayPrice": "₹1,499",
+      "discountPercent": 62
     },
     "stock": {
       "available": true,
-      "quantity": 50
+      "quantity": 43,
+      "lowStockThreshold": 10
     },
+    "rating": {
+      "score": 4.1,
+      "reviewsCount": 89400
+    },
+    "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&auto=format&fit=crop&q=80",
     "attributes": {
-      "type": "on-ear",
+      "type": "On-Ear",
       "wireless": true,
       "batteryLife": "15 hours",
       "noiseCancellation": false,
       "color": "Luscious Black",
       "microphone": true,
-      "bluetoothVersion": "5.0"
+      "bluetoothVersion": "5.0",
+      "driverSize": "40mm"
     },
+    "features": [
+      "40mm dynamic drivers for punchy signature HD bass",
+      "Up to 15 hours non-stop playback",
+      "Ergonomically designed with comfortable padded ear cushions",
+      "Integrated controls with voice assistant support"
+    ],
     "semanticTags": [
       "budget headphones",
       "wireless headphones under 2000",
       "boat rockerz",
       "daily use headphones",
-      "bass headphones"
+      "bass headphones",
+      "student",
+      "affordable"
     ],
-    "description": "Affordable on-ear wireless headphones with 40mm dynamic drivers, punchy HD bass, 15 hours playback, and comfortable padded ear cushions."
+    "description": "Affordable on-ear wireless headphones with 40mm dynamic drivers, punchy HD bass, 15 hours playback, and comfortable padded ear cushions.",
+    "qualityScore": 92,
+    "sellerId": "seller_boat_lifestyle"
   },
   {
     "id": "prod_003",
-    "name": "Apple AirPods Pro (2nd Generation)",
-    "category": "Electronics",
-    "subCategory": "Audio",
+    "name": "Apple AirPods Pro (2nd Gen) with USB-C",
+    "category": "Audio",
+    "subCategory": "Earbuds",
     "brand": "Apple",
     "price": {
       "amount": 24900,
+      "mrp": 26900,
       "currency": "INR",
-      "displayPrice": "₹24,900"
+      "displayPrice": "₹24,900",
+      "discountPercent": 7
     },
     "stock": {
       "available": true,
-      "quantity": 8
+      "quantity": 8,
+      "lowStockThreshold": 5
     },
+    "rating": {
+      "score": 4.9,
+      "reviewsCount": 18450
+    },
+    "image": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&auto=format&fit=crop&q=80",
     "attributes": {
-      "type": "in-ear earbuds",
+      "type": "In-Ear Earbuds",
       "wireless": true,
       "batteryLife": "6 hours (30 with case)",
       "noiseCancellation": true,
       "color": "White",
       "microphone": true,
-      "waterResistance": "IPX4"
+      "waterResistance": "IP54 dust, sweat, and water resistant",
+      "chip": "Apple H2 headphone chip"
     },
+    "features": [
+      "Up to 2x more Active Noise Cancellation than previous generation",
+      "Adaptive Audio dynamically blends Transparency and ANC",
+      "Personalized Spatial Audio with dynamic head tracking",
+      "MagSafe Charging Case (USB-C) with speaker and lanyard loop"
+    ],
     "semanticTags": [
       "airpods",
       "apple earbuds",
       "true wireless",
       "anc earbuds",
       "iphone accessories",
-      "premium earbuds"
+      "premium earbuds",
+      "apple ecosystem"
     ],
-    "description": "Next-level active noise cancellation, adaptive transparency, personalized spatial audio with dynamic head tracking, and MagSafe charging case with USB-C."
+    "description": "Next-level active noise cancellation, adaptive transparency, personalized spatial audio with dynamic head tracking, and MagSafe charging case with USB-C.",
+    "qualityScore": 97,
+    "sellerId": "seller_apple_authorized"
   },
   {
     "id": "prod_004",
-    "name": "Keychron K2 Wireless Mechanical Keyboard",
-    "category": "Electronics",
-    "subCategory": "Peripherals",
-    "brand": "Keychron",
+    "name": "OnePlus Nord CE 4 5G (8GB RAM, 128GB Storage)",
+    "category": "Smartphones",
+    "subCategory": "Android Phones",
+    "brand": "OnePlus",
     "price": {
-      "amount": 7999,
+      "amount": 24999,
+      "mrp": 27999,
       "currency": "INR",
-      "displayPrice": "₹7,999"
+      "displayPrice": "₹24,999",
+      "discountPercent": 11
     },
     "stock": {
       "available": true,
-      "quantity": 20
+      "quantity": 16,
+      "lowStockThreshold": 5
     },
+    "rating": {
+      "score": 4.5,
+      "reviewsCount": 12800
+    },
+    "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80",
     "attributes": {
-      "switchType": "Gateron Brown",
-      "layout": "75% compact (84 keys)",
-      "connectivity": ["Bluetooth 5.1", "USB-C wired"],
-      "backlight": "RGB",
-      "compatibleOS": ["Mac", "Windows", "Linux", "iOS", "Android"],
-      "battery": "4000mAh"
+      "ram": "8GB LPDDR4X",
+      "storage": "128GB UFS 3.1",
+      "processor": "Qualcomm Snapdragon 7 Gen 3",
+      "battery": "5500mAh with 100W SUPERVOOC charging",
+      "display": "6.7 inch 120Hz AMOLED FHD+",
+      "camera": "50MP Sony LYT-600 OIS + 8MP Ultra-wide",
+      "connectivity": "5G, Wi-Fi 6, Bluetooth 5.4",
+      "color": "Celadon Marble"
     },
-    "semanticTags": [
-      "mechanical keyboard",
-      "wireless keyboard",
-      "mac mechanical keyboard",
-      "developer keyboard",
-      "compact keyboard"
+    "features": [
+      "Qualcomm Snapdragon 7 Gen 3 flagship architecture",
+      "100W SUPERVOOC fast charge: 1% to 100% in 29 minutes",
+      "Massive 5500mAh durable 4-year health battery",
+      "50MP Sony LYT-600 sensor with Optical Image Stabilization"
     ],
-    "description": "A 75% layout compact Bluetooth mechanical keyboard engineered for Mac and Windows. Connects up to 3 devices with seamless switching."
+    "semanticTags": [
+      "best phone under 30000",
+      "best phone under 25000",
+      "oneplus phone",
+      "5g smartphone",
+      "fast charging phone",
+      "amoled phone",
+      "budget flagship"
+    ],
+    "description": "OnePlus Nord CE 4 delivers flagship-grade Snapdragon 7 Gen 3 performance, ultra-fast 100W charging, 120Hz fluid AMOLED display, and a 50MP Sony camera under ₹25,000.",
+    "qualityScore": 96,
+    "sellerId": "seller_oneplus_store"
   },
   {
     "id": "prod_005",
+    "name": "Samsung Galaxy S23 FE 5G (8GB RAM, 128GB Storage)",
+    "category": "Smartphones",
+    "subCategory": "Android Phones",
+    "brand": "Samsung",
+    "price": {
+      "amount": 29999,
+      "mrp": 49999,
+      "currency": "INR",
+      "displayPrice": "₹29,999",
+      "discountPercent": 40
+    },
+    "stock": {
+      "available": true,
+      "quantity": 11,
+      "lowStockThreshold": 4
+    },
+    "rating": {
+      "score": 4.6,
+      "reviewsCount": 16700
+    },
+    "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=600&auto=format&fit=crop&q=80",
+    "attributes": {
+      "ram": "8GB",
+      "storage": "128GB",
+      "processor": "Exynos 2200 (4nm)",
+      "battery": "4500mAh with 25W fast charge & wireless charging",
+      "display": "6.4 inch Dynamic AMOLED 2X 120Hz",
+      "camera": "50MP Triple Pro Camera with 3x Optical Zoom OIS",
+      "connectivity": "5G, Wi-Fi 6E, NFC",
+      "waterResistance": "IP68 water & dust resistant",
+      "color": "Mint"
+    },
+    "features": [
+      "Galaxy AI integration: Circle to Search, Live Translate, Photo Assist",
+      "Pro-grade 50MP camera system with Nightography and 3x optical telephoto",
+      "IP68 dust & water resistance rating and Corning Gorilla Glass 5",
+      "Dynamic AMOLED 2X display with Vision Booster"
+    ],
+    "semanticTags": [
+      "best phone under 30000",
+      "samsung galaxy",
+      "ai phone",
+      "flagship phone",
+      "waterproof phone",
+      "wireless charging",
+      "best camera phone under 30000"
+    ],
+    "description": "Premium Galaxy flagship experience under ₹30,000 with Galaxy AI, IP68 water resistance, pro-grade 50MP telephoto camera, and vivid 120Hz Dynamic AMOLED display.",
+    "qualityScore": 99,
+    "sellerId": "seller_samsung_retail"
+  },
+  {
+    "id": "prod_006",
+    "name": "Apple iPhone 15 (128GB, Blue)",
+    "category": "Smartphones",
+    "subCategory": "iOS Phones",
+    "brand": "Apple",
+    "price": {
+      "amount": 69900,
+      "mrp": 79900,
+      "currency": "INR",
+      "displayPrice": "₹69,900",
+      "discountPercent": 13
+    },
+    "stock": {
+      "available": true,
+      "quantity": 10,
+      "lowStockThreshold": 3
+    },
+    "rating": {
+      "score": 4.9,
+      "reviewsCount": 35200
+    },
+    "image": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600&auto=format&fit=crop&q=80",
+    "attributes": {
+      "ram": "6GB",
+      "storage": "128GB NVMe",
+      "processor": "A16 Bionic chip",
+      "display": "6.1 inch Super Retina XDR with Dynamic Island",
+      "camera": "48MP Main with 2x Telephoto + 12MP Ultra Wide",
+      "connectivity": "USB-C, 5G, Wi-Fi 6, Ultra Wideband 2",
+      "waterResistance": "IP68 (6 meters for up to 30 mins)",
+      "color": "Blue"
+    },
+    "features": [
+      "Dynamic Island bubbles up alerts and Live Activities",
+      "Innovative 48MP main camera for super-high-resolution photos",
+      "Universal USB-C charging connector",
+      "All-day battery life with up to 20 hours video playback"
+    ],
+    "semanticTags": [
+      "iphone",
+      "iphone 15",
+      "apple phone",
+      "premium smartphone",
+      "dynamic island",
+      "flagship phone",
+      "ios"
+    ],
+    "description": "iPhone 15 brings you Dynamic Island, 48MP Main camera with 2x Telephoto, durable color-infused glass design, and versatile USB-C connectivity.",
+    "qualityScore": 99,
+    "sellerId": "seller_apple_authorized"
+  },
+  {
+    "id": "prod_007",
+    "name": "Keychron K2 Wireless Mechanical Keyboard (RGB Backlit)",
+    "category": "Peripherals",
+    "subCategory": "Keyboards",
+    "brand": "Keychron",
+    "price": {
+      "amount": 7999,
+      "mrp": 9499,
+      "currency": "INR",
+      "displayPrice": "₹7,999",
+      "discountPercent": 16
+    },
+    "stock": {
+      "available": true,
+      "quantity": 22,
+      "lowStockThreshold": 5
+    },
+    "rating": {
+      "score": 4.7,
+      "reviewsCount": 4200
+    },
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=80",
+    "attributes": {
+      "switchType": "Gateron G Pro Brown (Tactile)",
+      "layout": "75% Compact (84 Keys)",
+      "connectivity": "Bluetooth 5.1 & USB-C wired dual mode",
+      "backlight": "RGB 18+ Lighting Effects",
+      "battery": "4000mAh (Up to 240 hours without backlight)",
+      "compatibleOS": "Mac, Windows, Linux, Android, iOS"
+    },
+    "features": [
+      "75% compact layout retaining all essential shortcut & arrow keys",
+      "Connects with up to 3 devices via Bluetooth with seamless switching",
+      "Dedicated Mac layout keycaps included with Windows compatibility",
+      "Massive 4000mAh rechargeable lithium battery"
+    ],
+    "semanticTags": [
+      "mechanical keyboard",
+      "wireless keyboard",
+      "mac keyboard",
+      "developer keyboard",
+      "gamer keyboard",
+      "tactile switch",
+      "keychron"
+    ],
+    "description": "A 75% layout compact Bluetooth mechanical keyboard engineered for Mac and Windows. Connects up to 3 devices with seamless switching.",
+    "qualityScore": 95,
+    "sellerId": "seller_keychron_india"
+  },
+  {
+    "id": "prod_008",
     "name": "Logitech MX Master 3S Wireless Performance Mouse",
-    "category": "Electronics",
-    "subCategory": "Peripherals",
+    "category": "Peripherals",
+    "subCategory": "Mice",
     "brand": "Logitech",
     "price": {
       "amount": 9495,
+      "mrp": 10995,
       "currency": "INR",
-      "displayPrice": "₹9,495"
+      "displayPrice": "₹9,495",
+      "discountPercent": 14
     },
     "stock": {
       "available": false,
-      "quantity": 0
+      "quantity": 0,
+      "lowStockThreshold": 3
     },
+    "rating": {
+      "score": 4.9,
+      "reviewsCount": 15400
+    },
+    "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&auto=format&fit=crop&q=80",
     "attributes": {
-      "sensor": "8K DPI Darkfield",
-      "clicks": "Quiet clicks (90% noise reduction)",
-      "scrollWheel": "MagSpeed electromagnetic",
-      "connectivity": ["Bluetooth", "Logi Bolt USB receiver"],
-      "battery": "Up to 70 days on full charge",
-      "ergonomic": true
+      "sensor": "8000 DPI Darkfield High Precision",
+      "clicks": "Quiet Clicks (90% noise reduction)",
+      "scrollWheel": "MagSpeed Electromagnetic (1000 lines/sec)",
+      "connectivity": "Bluetooth Low Energy & Logi Bolt USB",
+      "battery": "Up to 70 days on a single full charge",
+      "ergonomic": true,
+      "color": "Graphite"
     },
+    "features": [
+      "8K DPI any-surface tracking, including transparent glass",
+      "Quiet clicks deliver satisfying tactile feel with 90% less click noise",
+      "MagSpeed electromagnetic scrolling is 90% faster and 87% more precise",
+      "Ergonomic silhouette crafted for palm comfort and thumb wheel access"
+    ],
     "semanticTags": [
       "ergonomic mouse",
       "coding mouse",
+      "developer mouse",
       "designer mouse",
       "quiet mouse",
       "logitech mx",
       "productivity mouse"
     ],
-    "description": "An iconic precision mouse remastered with Quiet Clicks, 8K DPI tracking on any surface including glass, and ultra-fast MagSpeed scrolling."
+    "description": "An iconic precision mouse remastered with Quiet Clicks, 8K DPI tracking on any surface including glass, and ultra-fast MagSpeed scrolling.",
+    "qualityScore": 98,
+    "sellerId": "seller_logitech_hub"
   },
   {
-    "id": "prod_006",
-    "name": "Anker 737 Power Bank (PowerCore 24K)",
-    "category": "Electronics",
-    "subCategory": "Accessories",
-    "brand": "Anker",
+    "id": "prod_009",
+    "name": "Razer DeathAdder V3 Pro Wireless Gaming Mouse",
+    "category": "Peripherals",
+    "subCategory": "Mice",
+    "brand": "Razer",
     "price": {
-      "amount": 13999,
+      "amount": 9999,
+      "mrp": 12999,
       "currency": "INR",
-      "displayPrice": "₹13,999"
+      "displayPrice": "₹9,999",
+      "discountPercent": 23
     },
     "stock": {
       "available": true,
-      "quantity": 12
+      "quantity": 16,
+      "lowStockThreshold": 4
     },
+    "rating": {
+      "score": 4.8,
+      "reviewsCount": 6700
+    },
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&auto=format&fit=crop&q=80",
     "attributes": {
-      "capacity": "24000mAh",
-      "outputPower": "140W max",
-      "ports": ["2x USB-C", "1x USB-A"],
-      "display": "Smart digital display",
-      "chargingTech": "Power Delivery 3.1"
+      "sensor": "Focus Pro 30K Optical Sensor",
+      "weight": "Ultra-lightweight 63g",
+      "batteryLife": "90 hours continuous gaming",
+      "switches": "Optical Mouse Switches Gen-3 (90M clicks)",
+      "connectivity": "Razer HyperSpeed Wireless & USB-C",
+      "ergonomic": true,
+      "color": "Black"
     },
+    "features": [
+      "Ultra-lightweight 63g design refined with top esports pros",
+      "Razer Focus Pro 30K Optical Sensor for pixel-perfect tracking",
+      "Optical switches Gen-3 with zero debounce delay and no double-clicks",
+      "Up to 90 hours of high-performance wireless battery life"
+    ],
+    "semanticTags": [
+      "gaming mouse",
+      "razer deathadder",
+      "esports mouse",
+      "wireless mouse",
+      "substitute for mx master",
+      "ergonomic mouse",
+      "gamer"
+    ],
+    "description": "Ultra-lightweight 63g wireless ergonomic esports gaming mouse with 30K optical sensor, 90-hour battery life, and lag-free HyperSpeed wireless.",
+    "qualityScore": 96,
+    "sellerId": "seller_razer_india"
+  },
+  {
+    "id": "prod_010",
+    "name": "Anker 737 Power Bank (PowerCore 24K, 140W)",
+    "category": "Accessories",
+    "subCategory": "Power Banks",
+    "brand": "Anker",
+    "price": {
+      "amount": 13999,
+      "mrp": 16999,
+      "currency": "INR",
+      "displayPrice": "₹13,999",
+      "discountPercent": 18
+    },
+    "stock": {
+      "available": true,
+      "quantity": 11,
+      "lowStockThreshold": 3
+    },
+    "rating": {
+      "score": 4.8,
+      "reviewsCount": 3800
+    },
+    "image": "https://images.unsplash.com/photo-1609592426868-b7470f111816?w=600&auto=format&fit=crop&q=80",
+    "attributes": {
+      "capacity": "24,000mAh",
+      "outputPower": "140W max high-speed output",
+      "ports": "2x USB-C (140W), 1x USB-A (18W)",
+      "display": "Smart color digital display with real-time stats",
+      "technology": "Power Delivery 3.1 & GaNPrime",
+      "rechargeTime": "52 minutes to 100%"
+    },
+    "features": [
+      "Ultra-powerful two-way fast charging with Power Delivery 3.1",
+      "Smart digital display shows output power, remaining battery & recharge time",
+      "Massive 24,000mAh capacity charges MacBook Pro 16 or iPhone 5 times",
+      "ActiveShield 2.0 temperature monitoring 3 million times per day"
+    ],
     "semanticTags": [
       "laptop power bank",
+      "140w charger",
       "fast charging power bank",
       "anker powercore",
       "travel charger",
       "high capacity battery"
     ],
-    "description": "Ultra-powerful 140W two-way fast charging power bank with smart digital display, capable of charging laptops, phones, and tablets simultaneously."
+    "description": "Ultra-powerful 140W two-way fast charging power bank with smart digital display, capable of charging laptops, phones, and tablets simultaneously.",
+    "qualityScore": 95,
+    "sellerId": "seller_anker_direct"
+  },
+  {
+    "id": "prod_011",
+    "name": "Apple MacBook Air 13-inch (M3 chip, 16GB RAM, 512GB SSD)",
+    "category": "Laptops",
+    "subCategory": "Ultrabooks",
+    "brand": "Apple",
+    "price": {
+      "amount": 124900,
+      "mrp": 134900,
+      "currency": "INR",
+      "displayPrice": "₹1,24,900",
+      "discountPercent": 7
+    },
+    "stock": {
+      "available": true,
+      "quantity": 6,
+      "lowStockThreshold": 3
+    },
+    "rating": {
+      "score": 4.9,
+      "reviewsCount": 8420
+    },
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+    "attributes": {
+      "processor": "Apple M3 Chip (8-core CPU, 10-core GPU, 16-core Neural Engine)",
+      "ram": "16GB Unified Memory",
+      "storage": "512GB SSD",
+      "display": "13.6-inch Liquid Retina Display with True Tone",
+      "battery": "Up to 18 hours battery life",
+      "weight": "1.24 kg ultralight",
+      "ports": "MagSafe 3, 2x Thunderbolt / USB 4 ports, 3.5mm headphone jack",
+      "color": "Midnight"
+    },
+    "features": [
+      "Blazing-fast M3 chip with hardware-accelerated ray tracing and AI Neural Engine",
+      "Incredibly thin and lightweight all-aluminum unibody design",
+      "Up to 18 hours of battery life to work unplugged all day",
+      "Support for up to two external displays with laptop lid closed"
+    ],
+    "semanticTags": [
+      "macbook air",
+      "apple laptop",
+      "m3 macbook",
+      "lightweight laptop",
+      "student laptop",
+      "developer laptop",
+      "coding laptop",
+      "premium laptop"
+    ],
+    "description": "Supercharged by the M3 chip, the striking thin MacBook Air delivers phenomenal speed, up to 18 hours of battery life, and a radiant 13.6-inch Liquid Retina display.",
+    "qualityScore": 99,
+    "sellerId": "seller_apple_authorized"
+  },
+  {
+    "id": "prod_012",
+    "name": "ASUS ROG Zephyrus G14 Gaming Laptop (Ryzen 9, RTX 4060, 16GB)",
+    "category": "Laptops",
+    "subCategory": "Gaming Laptops",
+    "brand": "ASUS",
+    "price": {
+      "amount": 149990,
+      "mrp": 169990,
+      "currency": "INR",
+      "displayPrice": "₹1,49,990",
+      "discountPercent": 12
+    },
+    "stock": {
+      "available": true,
+      "quantity": 4,
+      "lowStockThreshold": 3
+    },
+    "rating": {
+      "score": 4.8,
+      "reviewsCount": 2150
+    },
+    "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600&auto=format&fit=crop&q=80",
+    "attributes": {
+      "processor": "AMD Ryzen 9 8945HS with Ryzen AI",
+      "gpu": "NVIDIA GeForce RTX 4060 8GB GDDR6 (100W TGP)",
+      "ram": "16GB LPDDR5X",
+      "storage": "1TB PCIe 4.0 NVMe SSD",
+      "display": "14-inch 3K 120Hz 0.2ms OLED ROG Nebula Display",
+      "weight": "1.5 kg compact CNC chassis",
+      "battery": "73WHr with fast Type-C PD charging"
+    },
+    "features": [
+      "First-ever ROG OLED laptop display with 3K resolution and 120Hz 0.2ms speed",
+      "NVIDIA GeForce RTX 4060 with DLSS 3.5 AI graphics power",
+      "AMD Ryzen 9 processor with dedicated NPU for generative AI workloads",
+      "Sleek CNC aluminum chassis with customizable Slash Lighting on lid"
+    ],
+    "semanticTags": [
+      "gaming laptop",
+      "asus rog",
+      "rtx 4060 laptop",
+      "oled laptop",
+      "gamer",
+      "powerful laptop",
+      "ai laptop"
+    ],
+    "description": "Thin, lightweight gaming powerhouse featuring an exquisite 3K 120Hz OLED Nebula display, AMD Ryzen 9 AI processor, and NVIDIA RTX 4060 graphics.",
+    "qualityScore": 97,
+    "sellerId": "seller_asus_rog"
+  },
+  {
+    "id": "prod_013",
+    "name": "Samsung Galaxy Watch 6 (44mm, Bluetooth + LTE)",
+    "category": "Wearables",
+    "subCategory": "Smartwatches",
+    "brand": "Samsung",
+    "price": {
+      "amount": 21999,
+      "mrp": 33999,
+      "currency": "INR",
+      "displayPrice": "₹21,999",
+      "discountPercent": 35
+    },
+    "stock": {
+      "available": true,
+      "quantity": 19,
+      "lowStockThreshold": 5
+    },
+    "rating": {
+      "score": 4.6,
+      "reviewsCount": 8900
+    },
+    "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop&q=80",
+    "attributes": {
+      "display": "1.5 inch Super AMOLED Sapphire Crystal Always-On",
+      "connectivity": "4G LTE, Bluetooth 5.3, Wi-Fi, NFC, GPS",
+      "battery": "425mAh with fast wireless charging",
+      "sensors": "BioActive sensor (ECG, HR, BIA body composition), Skin temperature",
+      "durability": "5ATM + IP68 water resistance & MIL-STD-810H certified",
+      "os": "Wear OS powered by Samsung"
+    },
+    "features": [
+      "Advanced sleep coaching with personalized sleep animal profile",
+      "Body composition BIA analysis (body fat %, skeletal muscle, water)",
+      "ECG and blood pressure monitoring directly from your wrist",
+      "Slimmer bezel offering 20% larger usable screen real estate"
+    ],
+    "semanticTags": [
+      "smartwatch",
+      "galaxy watch",
+      "fitness tracker",
+      "samsung watch",
+      "health tracker",
+      "lte watch",
+      "amoled watch"
+    ],
+    "description": "Start your everyday wellness journey with Galaxy Watch 6 featuring advanced sleep coaching, body composition analysis, heart health ECG, and LTE connectivity.",
+    "qualityScore": 96,
+    "sellerId": "seller_samsung_retail"
+  },
+  {
+    "id": "prod_014",
+    "name": "boAt Wave Call 2 Smartwatch with Bluetooth Calling",
+    "category": "Wearables",
+    "subCategory": "Smartwatches",
+    "brand": "boAt",
+    "price": {
+      "amount": 1299,
+      "mrp": 6990,
+      "currency": "INR",
+      "displayPrice": "₹1,299",
+      "discountPercent": 81
+    },
+    "stock": {
+      "available": true,
+      "quantity": 70,
+      "lowStockThreshold": 15
+    },
+    "rating": {
+      "score": 4.2,
+      "reviewsCount": 45000
+    },
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+    "attributes": {
+      "display": "1.83 inch HD Curved Display",
+      "calling": "Advanced Bluetooth Calling with dial pad & save contacts",
+      "battery": "Up to 5 days normal usage",
+      "sportsModes": "700+ Active Sports Modes",
+      "waterResistance": "IP67 dust and splash resistance",
+      "color": "Active Black"
+    },
+    "features": [
+      "Ultra large 1.83-inch HD vibrant curved screen",
+      "Crystal clear Bluetooth calling with built-in mic and speaker",
+      "700+ active sports modes from cricket to yoga",
+      "Customizable watch faces with DIY watch face studio"
+    ],
+    "semanticTags": [
+      "budget smartwatch",
+      "smartwatch under 2000",
+      "boat watch",
+      "calling smartwatch",
+      "fitness band",
+      "student",
+      "affordable smartwatch"
+    ],
+    "description": "Feature-packed affordable smartwatch with 1.83-inch HD display, hands-free Bluetooth calling, 700+ sports modes, and durable IP67 splash resistance.",
+    "qualityScore": 93,
+    "sellerId": "seller_boat_lifestyle"
+  },
+  {
+    "id": "prod_015",
+    "name": "Dell UltraSharp 27-inch 4K USB-C Hub Monitor (U2723QE)",
+    "category": "Peripherals",
+    "subCategory": "Monitors",
+    "brand": "Dell",
+    "price": {
+      "amount": 48990,
+      "mrp": 59990,
+      "currency": "INR",
+      "displayPrice": "₹48,990",
+      "discountPercent": 18
+    },
+    "stock": {
+      "available": true,
+      "quantity": 7,
+      "lowStockThreshold": 3
+    },
+    "rating": {
+      "score": 4.8,
+      "reviewsCount": 1890
+    },
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&auto=format&fit=crop&q=80",
+    "attributes": {
+      "screenSize": "27-inch 4K UHD (3840 x 2160)",
+      "panelType": "IPS Black Technology (2000:1 contrast ratio)",
+      "colorGamut": "98% DCI-P3, 100% sRGB, VESA DisplayHDR 400",
+      "ports": "USB-C with 90W Power Delivery, RJ45 Ethernet, DisplayPort, HDMI",
+      "ergonomics": "Height adjustable, tilt, swivel, pivot 90° portrait",
+      "builtInKVM": true
+    },
+    "features": [
+      "Groundbreaking IPS Black technology with 2000:1 contrast ratio for deep blacks",
+      "Single USB-C cable supplies 90W laptop power, 4K video, and wired RJ45 ethernet",
+      "Auto KVM allows switching between 2 connected PCs with one keyboard & mouse",
+      "ComfortView Plus reduces harmful blue light without sacrificing color accuracy"
+    ],
+    "semanticTags": [
+      "4k monitor",
+      "dell monitor",
+      "usb c monitor",
+      "designer monitor",
+      "programming monitor",
+      "coding display",
+      "office setup",
+      "tech pro"
+    ],
+    "description": "Be your most productive on a 27-inch 4K monitor with brilliant color and contrast featuring industry-leading IPS Black technology and comprehensive USB-C hub connectivity.",
+    "qualityScore": 98,
+    "sellerId": "seller_dell_enterprise"
+  },
+  {
+    "id": "prod_016",
+    "name": "Sony PlayStation 5 DualSense Wireless Controller",
+    "category": "Peripherals",
+    "subCategory": "Gaming Controllers",
+    "brand": "Sony",
+    "price": {
+      "amount": 5490,
+      "mrp": 6390,
+      "currency": "INR",
+      "displayPrice": "₹5,490",
+      "discountPercent": 14
+    },
+    "stock": {
+      "available": true,
+      "quantity": 25,
+      "lowStockThreshold": 6
+    },
+    "rating": {
+      "score": 4.8,
+      "reviewsCount": 14200
+    },
+    "image": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=600&auto=format&fit=crop&q=80",
+    "attributes": {
+      "feedback": "Immersive Haptic Feedback",
+      "triggers": "Dynamic Adaptive Triggers with varying tension levels",
+      "connectivity": "Bluetooth & USB-C wired mode",
+      "microphone": "Built-in microphone array & 3.5mm headset jack",
+      "battery": "Built-in rechargeable lithium-ion battery",
+      "compatibility": "PS5, Windows PC, Mac, Android, iOS",
+      "color": "White & Black"
+    },
+    "features": [
+      "Feel responsive haptic feedback to your in-game actions",
+      "Dynamic adaptive triggers simulate physical gear and weapon resistance",
+      "Built-in microphone and headset jack for instant party chat",
+      "Seamless plug-and-play compatibility with PC via Steam and USB-C"
+    ],
+    "semanticTags": [
+      "ps5 controller",
+      "dualsense",
+      "pc gamepad",
+      "gaming controller",
+      "sony controller",
+      "gamer",
+      "haptic feedback"
+    ],
+    "description": "Discover a deeper, highly immersive gaming experience that brings the action to life in the palms of your hands with haptic feedback and dynamic adaptive triggers.",
+    "qualityScore": 96,
+    "sellerId": "seller_official_sony"
   }
 ]
