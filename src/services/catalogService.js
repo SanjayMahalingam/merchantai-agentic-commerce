@@ -57,10 +57,10 @@ class CatalogService {
     }
 
     // 5. Category inference from query
-    if (/(phone|mobile|smartphone|android|iphone)/i.test(lowerQuery)) {
-      filters.category = 'Smartphones';
-    } else if (/(headphone|earphone|earbud|airpods|audio|anc)/i.test(lowerQuery)) {
+    if (/(headphone|earphone|earbud|airpods|audio|anc|soundbar)/i.test(lowerQuery)) {
       filters.category = 'Audio';
+    } else if (/\b(phone|mobile|smartphone|android|iphone)\b/i.test(lowerQuery)) {
+      filters.category = 'Smartphones';
     } else if (/(laptop|macbook|notebook)/i.test(lowerQuery)) {
       filters.category = 'Laptops';
     } else if (/(watch|smartwatch|band)/i.test(lowerQuery)) {

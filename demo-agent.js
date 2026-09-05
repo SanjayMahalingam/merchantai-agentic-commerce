@@ -64,8 +64,10 @@ async function runAIBuyerDemo() {
 
   console.log(`✅ [CATALOG API]: Found ${searchResponse.data.resultsCount} matching item(s) in Schema.org format:`);
   searchResponse.data.products.slice(0, 3).forEach((product, index) => {
+    const displayPrice = product.price?.displayPrice || product.offers?.displayPrice || product.agentSchema?.offers?.displayPrice || 'N/A';
+    const inStock = product.stock ? product.stock.available : (product.offers?.availability?.includes('InStock') || false);
     console.log(`   ${index + 1}. ${product.name}`);
-    console.log(`      💰 Price: ${product.offers.displayPrice} | 📦 ${product.offers.availability.includes('InStock') ? 'In Stock' : 'Out of Stock'}`);
+    console.log(`      💰 Price: ${displayPrice} | 📦 ${inStock ? 'In Stock' : 'Out of Stock'}`);
   });
 
   await sleep(1500);
@@ -108,7 +110,7 @@ async function runAIBuyerDemo() {
   await sleep(1000);
 
   const outOfStockTest = await makeRequest(`${API_BASE}/verify-price`, 'POST', {
-    productId: 'prod_005'
+    productId: 'prod_008'
   });
 
   console.log(`⚠️  [OUT OF STOCK]: ${outOfStockTest.data.error}`);

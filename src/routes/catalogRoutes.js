@@ -11,6 +11,7 @@ const cartService = require('../services/cartService');
 const fraudService = require('../services/fraudService');
 const analyticsService = require('../services/analyticsService');
 const catalogModel = require('../models/catalogModel');
+const comboService = require('../services/comboService');
 const auditLogger = require('../utils/auditLogger');
 
 // -------------------------------------------------------------
@@ -117,6 +118,47 @@ router.get('/product/:id/alternative', (req, res) => {
     res.json(alternative);
   } catch (error) {
     res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * GET /api/catalog/combos
+ * Product Combos & Bundles: Curated bundles with calculated bundle discounts
+ */
+router.get('/combos', (req, res) => {
+  try {
+    const combos = comboService.getAllCombos();
+    res.json({ count: combos.length, combos });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * GET /api/catalog/combos/:id
+ * Single bundle details
+ */
+router.get('/combos/:id', (req, res) => {
+  try {
+    const combo = comboService.getComboById(req.params.id);
+    if (!combo) return res.status(404).json({ error: 'Combo bundle not found' });
+    res.json(combo);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * POST /api/catalog/combos/:id/cart
+ * Add entire bundle into customer cart
+ */
+router.post('/combos/:id/cart', (req, res) => {
+  try {
+    const sessionId = req.body.sessionId || 'session_default';
+    const result = comboService.addComboToCart(req.params.id, sessionId);
+    res.json(result);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
 });
 

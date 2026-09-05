@@ -1,11 +1,15 @@
 {
-  "totalSearches": 148,
-  "recommendationsServed": 398,
+  "totalSearches": 151,
+  "recommendationsServed": 403,
   "cartAdditions": 90,
   "conversions": 34,
   "totalRevenue": 882885,
   "avgOrderValue": 25967,
   "topSearches": [
+    {
+      "query": "wireless headphones under ₹30000",
+      "count": 3
+    },
     {
       "query": "best phone under ₹30,000",
       "count": 4
@@ -59,7 +63,7 @@
     }
   ],
   "securityStats": {
-    "tamperAttemptsBlocked": 9,
+    "tamperAttemptsBlocked": 11,
     "highRiskOrdersFlagged": 2,
     "substitutionsSuggested": 15
   }

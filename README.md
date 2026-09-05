@@ -1,296 +1,550 @@
-# MerchantAI - Live Multi-Merchant Aggregator 🤖🛍️
-> **Autonomous AI Commerce with Real-Time Price Discovery Across Amazon, Flipkart & D2C Merchants**  
-> *Built for Razorpay AI Buildathon 2026 | Track 1: AI Growth & Agentic Commerce (Path #2)*
+# MerchantAI - Autonomous Agentic Commerce & Catalog Platform 🤖⚡
+> **AI-Readable Product Catalog, Conversational Shopping Agent, Multi-Gateway Payment Router (Razorpay + Cashfree) & NPCI Protocol Standards (UAP, ACP, AP2, x402)**  
+> *Built for Razorpay AI Buildathon 2026 | Track 1: AI Growth & Agentic Commerce (Path #2: Agent-Readable Catalog)*
+
+[![Node.js](https://img.shields.io/badge/Node.js-v18%2B-green.svg)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-v5.2-blue.svg)](https://expressjs.com/)
+[![Razorpay](https://img.shields.io/badge/Razorpay-Verified_APIs-0c2340.svg)](https://razorpay.com/)
+[![Cashfree](https://img.shields.io/badge/Cashfree-Payment_Gateway_v2023--08--01-008080.svg)](https://cashfree.com/)
+[![Schema.org](https://img.shields.io/badge/Schema.org-JSON--LD_Compliant-orange.svg)](https://schema.org/)
+[![NPCI Protocols](https://img.shields.io/badge/NPCI-UAP%20%7C%20ACP%20%7C%20AP2%20%7C%20x402-purple.svg)](https://npci.org.in/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
-## 🎯 The Vision
+## 🎯 The Vision: Agentic Commerce in 2026
 
-In 2026, **NPCI's agentic commerce protocols** (UAP, ACP, AP2, x402) are transforming how commerce works — from human-to-merchant to **agent-to-agent autonomous transactions**. But today's e-commerce is fragmented:
-- Amazon has its own catalog
-- Flipkart has its own catalog  
-- D2C merchants have their own catalogs
+In 2026, the convergence of **NPCI's agentic commerce protocols** (Universal Agent Protocol - UAP, Agentic Commerce Protocol - ACP, Agent Payment Protocol - AP2, and HTTP x402 Micropayments) is fundamentally transforming digital commerce. Transactions are shifting from manual, browser-driven human shopping to **autonomous, agent-to-agent interactions**.
 
-**AI buyer agents can't comparison shop across merchants autonomously.**
+However, legacy e-commerce infrastructure presents critical bottlenecks for AI buyer agents:
+- **Fragmented, Siloed Catalogs:** Amazon, Flipkart, and D2C brands host isolated catalogs with proprietary HTML formats that AI agents cannot reliably parse or compare.
+- **Vulnerability to Price Tampering & Injection:** Compromised or malicious buyer agents can attempt to inject fake discounts or manipulate order payload prices.
+- **Monolithic & Inflexible Checkout:** Traditional checkouts cannot dynamically select payment gateways based on ticket size, risk score, or agent policy limits.
+- **Lack of Explainability & Auditability:** Autonomous financial operations require strict regulatory logging, explainable reasoning for purchases, and bounded limits before any money moves.
 
----
-
-## 💡 Our Solution: MerchantAI Multi-Merchant Aggregator
-
-**MerchantAI** is the world's first **AI-native commerce aggregation layer** that:
-1. **Searches across multiple merchants in real-time** (Amazon India, Flipkart, Direct D2C stores)
-2. **Converts messy merchant data into unified Schema.org format** that AI agents can understand
-3. **Runs intelligent price arbitrage** to find the best deal across all sources
-4. **Verifies every price with Razorpay** before creating bounded transaction orders
-5. **Defends against price tampering attacks** with real-time security gates
-6. **Provides intelligent alternatives** when products are out of stock
-7. **Logs every action to a complete audit trail** for regulatory compliance
+**MerchantAI** is the comprehensive solution: an **enterprise-grade, agent-readable commerce platform** featuring standardized Schema.org product feeds, a conversational AI shopping assistant, autonomous multi-merchant price arbitrage, an AI risk and fraud gate, and a smart multi-gateway payment router supporting both **Razorpay** and **Cashfree**.
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ System Architecture
 
 ```
-                           👤 User / AI Buyer Agent
-                        "Find Sony WH-1000XM5 headphones"
-                                    │
-                                    ▼
-       ┌────────────────────────────────────────────────────────┐
-       │          🌐 MerchantAI Multi-Merchant Engine           │
-       │      (Real-time Discovery & Price Arbitrage)           │
-       └────────────┬───────────────────────┬───────────────────┘
-                    │                       │
-         ┌──────────┼───────────────────────┼──────────┐
-         ▼          ▼                       ▼          ▼
-    📦 Amazon   🛍️ Flipkart          🏬 D2C Store   [+ More]
-    ₹27,990     ₹26,490 ✅BEST       ₹26,990
-         │          │                       │
-         └──────────┴───────────────────────┴──────────┘
-                            │
-                            ▼
-       ┌────────────────────────────────────────────────────────┐
-       │         🧠 AI Arbitrage & Schema Normalizer            │
-       │  - Detects lowest price (Flipkart: ₹26,490)            │
-       │  - Normalizes to Schema.org / JSON-LD format           │
-       │  - Ranks by price, delivery, merchant trust score     │
-       └────────────┬───────────────────────────────────────────┘
-                    │
-                    ▼
-       ┌────────────────────────────────────────────────────────┐
-       │    🛡️ Razorpay Security & Verification Gate           │
-       │  - Price Tamper Defense (HTTP 403 blocks fraud)        │
-       │  - Real-time Inventory Check                           │
-       │  - Bounded Money Action (creates verified order)       │
-       │  - Full NPCI Audit Trail Logging                       │
-       └────────────────────────────────────────────────────────┘
+                                👤 User / Autonomous AI Buyer Agent
+                               "Find me the best ANC headphones"
+                                                │
+                                                ▼
+     ┌──────────────────────────────────────────────────────────────────────────────────┐
+     │                   🌐 MerchantAI Agentic Commerce Platform                        │
+     │   (Fast Express 5 Engine • Schema.org Normalizer • Session & Cart Store)         │
+     └──────────────────────────────────────────┬───────────────────────────────────────┘
+                                                │
+                 ┌──────────────────────────────┼──────────────────────────────┐
+                 ▼                              ▼                              ▼
+    ┌─────────────────────────┐   ┌───────────────────────────┐   ┌─────────────────────────┐
+    │ 🤖 Conversational Agent │   │ 🔍 Explainable NL Search  │   │ 📸 AI Catalog Studio    │
+    │  - Multi-turn dialog    │   │  - Semantic tag matching  │   │  - Raw text attribute   │
+    │  - Intent recognition   │   │  - Confidence scoring     │   │    extraction engine    │
+    │  - Auto cart management │   │  - Transparent reasoning  │   │  - Quality audit (0-100)│
+    │  - Execution trace log  │   │  - Smart spec filters     │   │  - Duplicate detector   │
+    └────────────┬────────────┘   └─────────────┬─────────────┘   └────────────┬────────────┘
+                 │                              │                              │
+                 └──────────────────────────────┼──────────────────────────────┘
+                                                │
+                                                ▼
+    ┌───────────────────────────────────────────────────────────────────────────────────┐
+    │                        ⚖️ Multi-Merchant Arbitrage Layer                          │
+    │            Amazon India (₹27,990) │ Flipkart (₹26,490) │ D2C Store (₹26,990)       │
+    │              • Best-deal recommendation  • Real-time savings calculation          │
+    │              • Trust score ranking       • Schema.org / JSON-LD offers            │
+    └───────────────────────────────────────────┬───────────────────────────────────────┘
+                                                │
+                                                ▼
+    ┌───────────────────────────────────────────────────────────────────────────────────┐
+    │                      🛡️ AI Risk & Fraud Evaluation Gate                           │
+    │  • Item-level & cart-level Price Tamper Defense (HTTP 403 blocks price mismatch)  │
+    │  • Unlisted SKU injection detection                                              │
+    │  • Hoarding / bulk arbitrage detection (>5 units)                                 │
+    │  • Velocity check (rapid repeat orders in 60s window)                             │
+    │  • Human-in-the-loop confirmation check (HTTP 412 if unapproved)                  │
+    └───────────────────────────────────────────┬───────────────────────────────────────┘
+                                                │
+                                                ▼
+    ┌───────────────────────────────────────────────────────────────────────────────────┐
+    │                🔀 Smart Multi-Gateway Payment Router                              │
+    │                                                                                   │
+    │       Low-Ticket / Instant UPI (< ₹2,000)      High-Ticket / Enterprise (≥ ₹30,000)│
+    │                        │                                        │                 │
+    │                        ▼                                        ▼                 │
+    │            ⚡ Cashfree Payments (PG v2023)              💳 Razorpay Gateway       │
+    │            • Cashfree SDK paymentSessionId              • Razorpay Order ID       │
+    │            • Webhook HMAC SHA-256 validation            • Razorpay Signature Check│
+    └───────────────────────────────────────────┬───────────────────────────────────────┘
+                                                │
+                                                ▼
+    ┌───────────────────────────────────────────────────────────────────────────────────┐
+    │              📋 Regulatory Compliance & NPCI Audit Stream                         │
+    │  • UTC timestamped JSON audit records • Bounded money actions verified            │
+    │  • Persistent disk logging (logs/audit.log) • Real-time UI stream & Analytics     │
+    └───────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🌟 Key Features
+## 🌟 Key Features & Capabilities
 
-### 🔍 **1. Live Multi-Merchant Search**
-- Type **any product name** in the web UI search bar
-- AI agent queries Amazon India, Flipkart, and Direct D2C merchants **simultaneously**
-- Returns **unified comparison cards** showing all prices side-by-side
+### 1. 📐 Agent-Readable Catalog (Schema.org / JSON-LD)
+- Canonical catalog formatted to **Schema.org** standards (`Product`, `Offer`, `Brand`).
+- Every product carries rich machine-readable metadata: technical attributes (RAM, storage, battery, noise cancellation, connectivity), semantic tags, inventory status, quality score, and seller provenance.
+- Exposes standardized discovery manifest at `/.well-known/agentic-commerce.json` in accordance with NPCI agentic commerce protocols.
 
-### 💰 **2. Intelligent Price Arbitrage**
-- AI automatically identifies the **lowest price** across all merchants
-- Shows **savings badges** (e.g., "Save ₹1,500")
-- Recommends best merchant based on price + delivery + trust score
+### 2. 🤖 Conversational AI Shopping Agent
+- Autonomous multi-turn conversational agent (`POST /api/catalog/agent/chat`).
+- **Autonomous Intent Recognition:** Detects shopping intents (`SEARCH`, `RECOMMEND`, `ADD_TO_CART`, `VIEW_CART`, `CHECKOUT`, `COMPARE`).
+- **Entity Resolution:** Accurately identifies products by SKU ID, name fragments, brand, or category.
+- **Transparent Reasoning:** Emits step-by-step `agentActionLog` traces explaining each decision taken by the agent.
 
-### 🛡️ **3. Price Tamper Defense (Security Gate)**
-- If a malicious/compromised agent tries to submit fake lower prices → **HTTP 403 BLOCKED**
-- Real-time verification against canonical catalog prices
-- Security violations logged to audit trail with severity level
+### 3. 🔍 Explainable Natural Language Search & Smart Filtering
+- Natural language catalog search (`POST /api/catalog/query`).
+- Decodes natural queries (e.g. *"best phone under ₹30,000"*, *"noise cancelling headphones for office"*).
+- Delivers an **Explainability Score** and **AI Reasoning** explaining why specific items match the agent's query.
+- Supports structured filtering by price bounds, brands, rating, and stock status.
 
-### 💡 **4. Intelligent Out-of-Stock Alternatives**
-- When a product is unavailable, AI doesn't just fail
-- Uses **semantic similarity matching** to find the next best alternative
-- Recommends in-stock products from the same category & price range
+### 4. 🔀 Smart Multi-Gateway Payment Router (Razorpay + Cashfree)
+- Seamless dual-gateway integration with **Razorpay** and **Cashfree Payments** (v2023-08-01 PG API).
+- **Autonomous Smart Routing Heuristic:**
+  - **Orders ≤ ₹2,000:** Dynamically routed to **Cashfree** for instant UPI Intent and QR checkout.
+  - **Orders ≥ ₹30,000:** Dynamically routed to **Razorpay** for high-limit card and netbanking tolerance.
+  - **Custom Policy:** Buyer agents or customers can explicitly override with `gateway: 'RAZORPAY'` or `gateway: 'CASHFREE'`.
+- End-to-end payment order initialization (`POST /api/orders/checkout`), signature verification & order completion (`POST /api/orders/confirm`).
+- Webhook endpoints for both gateways with HMAC cryptographic validation (`POST /api/orders/webhook/razorpay`, `POST /api/orders/webhook/cashfree`).
 
-### 📐 **5. Schema.org / JSON-LD Structured Data**
-- All merchant data normalized into **Schema.org Product** format
-- AI agents can parse and understand offers instantly
-- NPCI protocol compliant (UAP, ACP, AP2, x402)
+### 5. 🛡️ AI Risk & Fraud Evaluation Gate
+- Autonomous pre-payment safety gate (`fraudService.js`) scoring risk from 0 to 100:
+  - **Price Tamper Defense:** Verifies item prices and cart totals against canonical catalog values. If an agent attempts to submit a lower price, the request is **BLOCKED with HTTP 403**.
+  - **Unlisted SKU Injection Guard:** Detects unrecognized product IDs injected into cart payloads.
+  - **Hoarding & Reseller Arbitrage Guard:** Flags anomalous quantities (>5 units of any SKU).
+  - **High-Value Scrutiny:** Applies heightened scrutiny to orders above ₹50,000 and ₹1,50,000.
+  - **Velocity Throttling:** Detects rapid repeat orders within 60-second windows.
+  - **Human-in-the-Loop Safeguard:** Mandates signed customer confirmation (`humanApproved: true`) before initiating money movement (returns HTTP 412 if missing).
 
-### 💳 **6. Live Razorpay Order Creation**
-- Click **"AI Buy via Razorpay"** to create real test-mode transaction orders
-- Bounded money actions with full audit logging
-- Every order logged with buyer agent ID, merchant source, NPCI protocol version
+### 6. ⚖️ Multi-Merchant Price Discovery & Arbitrage
+- Queries simulated catalogs from Amazon India, Flipkart, and Direct D2C merchants simultaneously (`POST /api/catalog/multi-merchant/search`).
+- Automatically ranks merchant offers, detects the lowest verified price, and calculates exact savings.
 
-### 📊 **7. Real-Time Audit Trail**
-- Every query, price check, security violation, and order logged with UTC timestamp
-- Live-syncing audit stream in the web UI (updates every 3 seconds)
-- Full regulatory compliance for financial actions
+### 7. 🔄 Intelligent Out-of-Stock Substitution
+- When a requested item is out of stock, MerchantAI does not fail the transaction.
+- The **Semantic Alternative Engine** (`GET /api/catalog/product/:id/alternative`) identifies the closest available alternative in the same category and price tier, complete with human-readable rationale.
+
+### 8. 📸 AI Catalog Studio & Quality Auditor
+- **Raw Attribute Extraction:** Converts raw text descriptions or unstructured metadata into Schema.org product entries (`POST /api/catalog/ai-extract`), detecting brand, category, subcategory, selling price, MRP, and technical specifications.
+- **Catalog Quality Audit:** Scans the catalog and returns health metrics (`POST /api/catalog/quality-check`) with completeness scores (0-100), missing attribute flags, and rating distributions.
+- **Duplicate Detection:** Scans the catalog for potential duplicate listings using fuzzy title and specification matching (`GET /api/catalog/duplicates`).
+- **Low-Stock Alerts:** Automatically monitors items below safe inventory thresholds (`GET /api/catalog/low-stock`).
+
+### 9. 🎁 Curated Product Bundles & Combos Engine
+- Curated bundles (Developer Workstation Kit, Mobile Power Bundle, Audiophile Soundstage, Esports Battle Station) (`GET /api/catalog/combos`).
+- Dynamically computes live bundle totals, discount savings (10-15%), inventory validation, and 1-click cart addition (`POST /api/catalog/combos/:id/cart`).
+
+### 10. 🏪 Seller Portal & 1-Click Inventory Operations
+- Complete Seller CRUD operations (`POST /api/catalog/product`, `PUT /api/catalog/product/:id`, `DELETE /api/catalog/product/:id`).
+- 1-Click Inventory Restocking (`POST /api/catalog/product/:id/restock`).
+- Automatic real-time inventory deduction upon confirmed checkout.
+
+### 11. 📊 Real-Time Analytics & Audit Trail
+- Live commerce metrics: total revenue, average order value (AOV), conversion rate, popular search terms, category trends, and security defense statistics (`GET /api/analytics/dashboard`).
+- Full regulatory compliance audit log stream (`GET /api/catalog/audit-logs`) stored persistently in `logs/audit.log`.
+
+---
+
+## 🖥️ Interactive Web Playground
+
+Open **`http://localhost:3000`** in your browser to access the comprehensive dashboard:
+
+| Tab | Key Functionality |
+| :--- | :--- |
+| **🛍️ Store & Search** | Live natural language search bar, smart spec filters, multi-merchant price comparison cards, price tamper simulator, and instant checkout. |
+| **🤖 AI Shopping Agent** | Conversational chat interface, intent recognition, entity resolution, live cart updates, and execution trace logs. |
+| **📸 AI Catalog Studio** | Unstructured text-to-catalog attribute extractor, catalog quality health auditor, and duplicate listing detector. |
+| **🏪 Seller Portal** | Inventory manager, 1-click restock button, product creator, and catalog editor. |
+| **📊 Analytics & History** | Real-time revenue metrics, top search terms, order history, and live-syncing NPCI audit log stream. |
+| **🛒 Cart Drawer** | Dynamic cart calculation, GST breakdown, threshold discounts, and dual-gateway checkout modal (Razorpay / Cashfree). |
 
 ---
 
 ## 🚀 Quick Start
 
-### 1. Installation
+### 1. Prerequisites
+- **Node.js** v18.0.0 or higher
+- **npm** v9.0.0 or higher
+
+### 2. Installation
 ```bash
-git clone https://github.com/YOUR_USERNAME/merchantai-catalog.git
+git clone https://github.com/SanjayMahalingam/merchantai-agentic-commerce.git
 cd merchantai-catalog
 npm install
 ```
 
-### 2. Start the Server
+### 3. Environment Configuration
+Copy `.env.example` to `.env`:
 ```bash
-npm start
+cp .env.example .env
 ```
-Server runs on `http://localhost:3000`
+Edit `.env` with your credentials (the server will automatically run in simulation/sandbox mode if test keys are left as default):
+```env
+PORT=3000
+NODE_ENV=development
 
-### 3. Open the Web Playground
-Open your browser: **`http://localhost:3000`**
+# Razorpay Test Credentials (https://dashboard.razorpay.com/app/keys)
+RAZORPAY_KEY_ID=rzp_test_YOUR_KEY_HERE
+RAZORPAY_KEY_SECRET=YOUR_SECRET_HERE
 
-You'll see:
-- **Live search bar** (try "Sony headphones", "boAt earbuds", "AirPods Pro")
-- **Multi-merchant comparison cards** (Amazon vs Flipkart vs D2C)
-- **Security attack simulator buttons**
-- **Real-time audit stream**
+# Cashfree Test Credentials (https://merchant.cashfree.com/merchants/signup)
+CASHFREE_APP_ID=cf_test_YOUR_APP_ID_HERE
+CASHFREE_SECRET_KEY=cf_test_YOUR_SECRET_KEY_HERE
+CASHFREE_ENV=sandbox
+```
 
-### 4. Run the CLI Demo
+### 4. Start the Server
+```bash
+# Start production / standard server
+npm start
+
+# Or start with live reload
+npm run dev
+```
+Server starts on **`http://localhost:3000`**.
+
+### 5. Run the Automated Demo Agent
+To execute the automated 5-scenario demo illustrating natural language query, price verification, tamper defense, smart substitution, and audit logging:
 ```bash
 npm run demo
 ```
-Runs 5 automated scenarios showing all features
 
 ---
 
-## 📡 API Endpoints
+## 📡 Comprehensive API Reference
 
-### **POST `/api/catalog/multi-merchant/search`**
-Real-time discovery across multiple merchants
+All routes are mounted under both `/api/catalog` and `/api` for developer ergonomics.
 
-**Request:**
+### 1. Catalog & Discovery Endpoints
+
+#### `GET /api/catalog`
+Returns all products normalized into Schema.org format.
+
+#### `POST /api/catalog/query`
+Natural language catalog query with Explainable AI reasoning.
 ```json
+// Request
 {
-  "query": "Sony WH-1000XM5 headphones"
+  "query": "wireless headphones under ₹30000",
+  "filters": {
+    "inStock": true,
+    "minRating": 4.5
+  }
 }
-```
 
-**Response:**
-```json
+// Response
 {
-  "merchantsCount": 3,
+  "query": "wireless headphones under ₹30000",
   "resultsCount": 1,
-  "latency": "45ms",
-  "results": [
+  "intent": {
+    "category": "Audio",
+    "priceConstraint": { "max": 30000 },
+    "detectedSpecs": ["wireless", "anc"]
+  },
+  "aiReasoning": "Found 1 premium audio product matching 'wireless' with ANC under budget limit of ₹30,000.",
+  "products": [
     {
-      "product": {
-        "id": "prod_001",
-        "name": "Sony WH-1000XM5 Wireless Noise-Canceling Headphones",
-        "brand": "Sony"
+      "@type": "Product",
+      "id": "prod_001",
+      "name": "Sony WH-1000XM5 Wireless Noise-Canceling Headphones",
+      "brand": "Sony",
+      "offers": {
+        "price": 26990,
+        "displayPrice": "₹26,990",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
       },
-      "offers": [
-        {
-          "merchantName": "Amazon India",
-          "price": 27990,
-          "displayPrice": "₹27,990",
-          "inStock": true,
-          "deliveryDays": 1
-        },
-        {
-          "merchantName": "Flipkart",
-          "price": 26490,
-          "displayPrice": "₹26,490",
-          "inStock": true,
-          "deliveryDays": 2
-        }
-      ],
-      "bestDeal": {
-        "recommendedMerchant": "Flipkart",
-        "bestPrice": 26490,
-        "savings": 1500,
-        "aiReasoning": "Selected Flipkart for lowest verified price..."
-      }
+      "matchScore": 98
     }
   ]
 }
 ```
 
-### **POST `/api/catalog/agent-order`**
-Create live Razorpay transaction order
+#### `GET /api/catalog/product/:id`
+Retrieves detailed product metadata by ID.
 
-**Request:**
+#### `POST /api/catalog/compare`
+Side-by-side comparison matrix for multiple product IDs.
 ```json
+// Request
+{
+  "productIds": ["prod_001", "prod_003"]
+}
+```
+
+#### `GET /api/catalog/personalized?persona=developer`
+Retrieves persona-ranked catalog (personas: `developer`, `gamer`, `audiophile`, `student`, `budget`).
+
+#### `GET /api/catalog/product/:id/alternative`
+Returns semantic in-stock alternative for an out-of-stock product.
+
+#### `GET /api/catalog/combos`
+Lists all curated bundles with dynamic discount calculations.
+
+#### `POST /api/catalog/combos/:id/cart`
+Adds all products from a specified bundle directly into the user's cart.
+
+---
+
+### 2. AI Shopping Agent & Cart Endpoints
+
+#### `POST /api/catalog/agent/chat`
+Conversational multi-turn assistant endpoint.
+```json
+// Request
+{
+  "message": "Add Sony WH-1000XM5 to my cart",
+  "sessionId": "session_user_42"
+}
+
+// Response
+{
+  "agentMessage": "🛒 I have added **Sony WH-1000XM5 Wireless Noise-Canceling Headphones** (₹26,990) to your cart! Your current order total is **₹31,848** (1 item, incl. GST).",
+  "actionTaken": "ADD_TO_CART_SUCCESS",
+  "agentActionLog": [
+    "[Prompt Received]: \"Add Sony WH-1000XM5 to my cart\"",
+    "[Intent Recognition]: Customer requested ADD_TO_CART",
+    "[Entity Resolution]: Identified product \"Sony WH-1000XM5...\" (ID: prod_001)",
+    "[Cart Gate]: Stock validated (29 units available)",
+    "[Cart Update]: Added 1 unit to cart."
+  ],
+  "suggestions": ["Proceed to Checkout", "View Cart", "Recommend accessories"]
+}
+```
+
+#### `GET /api/catalog/cart?sessionId=session_user_42`
+Retrieves the active cart state, stock validation, 18% GST calculation, and discount status.
+
+#### `POST /api/catalog/cart/add`
+Adds a product to cart (`productId`, `quantity`, `sessionId`).
+
+#### `POST /api/catalog/cart/update`
+Updates item quantity in cart.
+
+#### `POST /api/catalog/cart/clear`
+Empties active cart.
+
+---
+
+### 3. Security, Risk & Multi-Gateway Checkout
+
+#### `POST /api/catalog/verify-price`
+Pre-transaction price & stock verification gate.
+```json
+// Request (Price Tamper Attack Simulation)
 {
   "productId": "prod_001",
-  "merchantName": "Flipkart",
-  "amount": 26490,
-  "buyerAgentId": "Autonomous_Shopper_Agent_77"
+  "claimedPrice": 100
+}
+
+// Response (HTTP 403 Forbidden)
+{
+  "error": "SECURITY_GATE_VIOLATION",
+  "message": "SECURITY ALERT: Price tampering detected! Claimed ₹100 but official price is ₹26,990.",
+  "actualPrice": 26990,
+  "claimedPrice": 100
 }
 ```
 
-**Response:**
+#### `POST /api/catalog/orders/checkout`
+Risk screening and smart gateway order dispatch.
 ```json
+// Request
+{
+  "sessionId": "session_user_42",
+  "gateway": "AUTO",
+  "humanApproved": true,
+  "customer": {
+    "name": "Sanjay Mahalingam",
+    "email": "sanjay@example.com",
+    "phone": "9876543210"
+  }
+}
+
+// Response
 {
   "success": true,
-  "orderId": "order_mock_1725432253456",
-  "amount": 26490,
-  "currency": "INR",
-  "merchant": "Flipkart",
-  "receipt": "rcpt_agent_1725432253456",
-  "status": "CREATED",
-  "auditNotice": "Transaction logged and bounded under NPCI Agentic Protocol."
+  "gateway": "RAZORPAY",
+  "routingReason": "AI Smart Router: Selected Razorpay for high-value enterprise payment limit tolerance",
+  "order": {
+    "id": "order_rzp_1725536400",
+    "amount": 3184800,
+    "currency": "INR",
+    "status": "created"
+  },
+  "riskScore": 5,
+  "riskLevel": "LOW",
+  "approvalToken": "token_auth_1725536400"
 }
 ```
 
-### **Other Endpoints:**
-- `POST /api/catalog/query` - Natural language catalog search
-- `GET /api/catalog/product/:id` - Get product details
-- `POST /api/catalog/verify-price` - Razorpay price verification
-- `GET /api/catalog/audit-logs` - View complete audit trail
-- `GET /.well-known/agentic-commerce.json` - NPCI discovery manifest
+#### `POST /api/catalog/orders/confirm`
+Verifies gateway signature and confirms order completion.
+
+#### `POST /api/catalog/orders/webhook/razorpay` & `POST /api/catalog/orders/webhook/cashfree`
+Webhook handlers with cryptographic signature validation.
+
+#### `GET /api/catalog/orders/history`
+Returns historical confirmed orders with audit traces.
 
 ---
 
-## 🏆 Razorpay Buildathon Compliance
+### 4. AI Catalog Studio & Quality Auditor
 
-| Requirement | Implementation |
-| :--- | :--- |
-| **Explainable Money Action** | Every price must pass Razorpay verification gate before order creation |
-| **Bounded & Gated** | Price tampering defense blocks fraudulent amounts (HTTP 403) |
-| **Audit Trail** | Complete UTC-timestamped log of every query, verification, order, and failure |
-| **Failure Handling** | Graceful out-of-stock handling with intelligent alternative recommendations |
+#### `POST /api/catalog/ai-extract`
+Extracts structured Schema.org attributes from unstructured text descriptions or image details.
+```json
+// Request
+{
+  "text": "OnePlus Nord CE 4 5G phone with 8GB RAM and 128GB Storage, 50MP camera, 5500mAh battery for ₹24,999"
+}
 
----
+// Response
+{
+  "success": true,
+  "extractedProduct": {
+    "name": "OnePlus Nord CE 4 5G 8GB RAM 128GB Storage",
+    "brand": "OnePlus",
+    "category": "Smartphones",
+    "subCategory": "Android Phones",
+    "price": { "amount": 24999, "currency": "INR", "displayPrice": "₹24,999" },
+    "attributes": {
+      "ram": "8GB",
+      "storage": "128GB",
+      "battery": "5500 mAh"
+    },
+    "qualityScore": 96
+  }
+}
+```
 
-## 🎬 5-Minute Video Demo Script
+#### `POST /api/catalog/quality-check`
+Runs a catalog-wide quality audit and returns completeness score, missing field warnings, and health status.
 
-### **0:00-1:00 — The Big Picture**
-- Show NPCI protocols (UAP/ACP/AP2/x402) bringing agent-to-agent commerce
-- Problem: Merchants have fragmented catalogs, AI agents can't comparison shop
-- Solution: MerchantAI aggregates Amazon + Flipkart + D2C in real-time
+#### `GET /api/catalog/duplicates`
+Scans the catalog for duplicate listings.
 
-### **1:00-2:30 — Live Web Playground**
-- Open `http://localhost:3000`
-- Type "Sony WH-1000XM5" in search bar
-- Show multi-merchant comparison cards (Amazon ₹27,990 vs Flipkart ₹26,490 ✅)
-- Click **"AI Buy via Razorpay"** → show real order creation
-
-### **2:30-3:30 — Security & Intelligence**
-- Click **"Price Tamper Attack"** → show HTTP 403 security gate blocking ₹100 fraud
-- Click **"Smart Alternative"** → show out-of-stock Logitech mouse auto-replaced with Keychron keyboard
-- Show **real-time audit stream** updating live
-
-### **3:30-4:30 — Code Walkthrough**
-- Show `multiMerchantService.js` (real-time aggregation logic)
-- Show `securityService.js` (tamper detection + alternatives)
-- Show `razorpayService.js` (order creation)
-- Show `logs/audit.log` (compliance trail)
-
-### **4:30-5:00 — Why This Wins**
-- "First AI-native multi-merchant aggregator with NPCI protocol compliance"
-- "Real-time price arbitrage + Razorpay security gates + intelligent recovery"
-- "Ready to scale this vision at Razorpay Bangalore!"
+#### `GET /api/catalog/low-stock?threshold=5`
+Retrieves all items below the specified stock quantity threshold.
 
 ---
 
-## 🔮 Future Roadmap
+### 5. Seller Portal Operations
 
-- 🔌 **Real Amazon/Flipkart API Integration** (move from mock to live merchant APIs)
-- 🌍 **Multi-Region Support** (US, EU, Southeast Asia merchant networks)
-- 🤖 **Advanced AI Agent Negotiation** (autonomous price bargaining with merchants)
-- 📈 **Merchant Analytics Dashboard** (track which AI agents are buying from you)
-- 🔗 **Blockchain Settlement Layer** (instant cross-merchant settlements via UPI x402)
+#### `POST /api/catalog/product`
+Creates and registers a new product in the catalog.
+
+#### `PUT /api/catalog/product/:id`
+Updates product specifications, price, or description.
+
+#### `DELETE /api/catalog/product/:id`
+Removes product from catalog.
+
+#### `POST /api/catalog/product/:id/restock`
+Restocks product quantity (`{ "amount": 20 }`).
+
+---
+
+### 6. Multi-Merchant Discovery & Protocols
+
+#### `POST /api/catalog/multi-merchant/search`
+Queries Amazon, Flipkart, and D2C stores simultaneously for real-time price arbitrage.
+
+#### `GET /.well-known/agentic-commerce.json`
+NPCI discovery manifest exposing supported protocols (`UAP`, `ACP`, `AP2`, `x402`), capabilities, and endpoints.
+
+#### `GET /api/analytics/dashboard`
+Returns live platform metrics: revenue, AOV, conversions, top search queries, and security stats.
+
+#### `GET /api/catalog/audit-logs?limit=50`
+Streams recent audit events with UTC timestamps.
+
+---
+
+## 🏆 Razorpay Buildathon 2026 Compliance
+
+| Requirement | Implementation & Architectural Evidence | Code Reference |
+| :--- | :--- | :--- |
+| **Explainable Money Action** | Every price check and query delivers explicit AI reasoning explaining why a match or recommendation was selected prior to transaction initialization. | [`catalogService.js`](file:///c:/Users/sanja/Desktop/merchantai-catalog/src/services/catalogService.js), [`shoppingAgentService.js`](file:///c:/Users/sanja/Desktop/merchantai-catalog/src/services/shoppingAgentService.js) |
+| **Bounded & Gated Transactions** | Pre-transaction price verification and multi-vector AI fraud engine enforce price tampering defense (HTTP 403), bulk arbitrage guards, and explicit human approval tokens (HTTP 412). | [`securityService.js`](file:///c:/Users/sanja/Desktop/merchantai-catalog/src/services/securityService.js), [`fraudService.js`](file:///c:/Users/sanja/Desktop/merchantai-catalog/src/services/fraudService.js) |
+| **Multi-Gateway Interoperability** | Autonomous routing engine dynamically selects between Razorpay and Cashfree based on ticket size and risk score, with full webhook signature validation. | [`paymentService.js`](file:///c:/Users/sanja/Desktop/merchantai-catalog/src/services/paymentService.js), [`cashfreeService.js`](file:///c:/Users/sanja/Desktop/merchantai-catalog/src/services/cashfreeService.js), [`razorpayService.js`](file:///c:/Users/sanja/Desktop/merchantai-catalog/src/services/razorpayService.js) |
+| **Complete Audit Trail** | All queries, verifications, tamper attempts, cart updates, and orders are recorded with ISO UTC timestamps and stored in `logs/audit.log`. | [`auditLogger.js`](file:///c:/Users/sanja/Desktop/merchantai-catalog/src/utils/auditLogger.js), [`analyticsService.js`](file:///c:/Users/sanja/Desktop/merchantai-catalog/src/services/analyticsService.js) |
+| **Graceful Failure Handling** | If an item is out of stock or verification fails, the Intelligent Substitution Engine suggests comparable in-stock items with reasoning. | [`securityService.js`](file:///c:/Users/sanja/Desktop/merchantai-catalog/src/services/securityService.js) |
+| **Protocol Standards Alignment** | Native compliance with NPCI agentic standards (UAP, ACP, AP2, x402) and Schema.org Product schemas. | [`agentic-commerce.json`](file:///c:/Users/sanja/Desktop/merchantai-catalog/public/.well-known/agentic-commerce.json) |
+
+---
+
+## 📁 Repository Structure
+
+```
+merchantai-catalog/
+├── data/
+│   ├── analytics.json                 # Real-time search, category & security analytics
+│   ├── catalog.json                   # Canonical Schema.org product catalog (20+ items)
+│   └── orders.json                    # Confirmed transaction orders with agent traces
+├── logs/
+│   └── audit.log                      # Immutable UTC timestamped audit trail
+├── public/
+│   ├── .well-known/
+│   │   └── agentic-commerce.json      # NPCI Agentic Discovery Manifest
+│   └── index.html                     # Full-featured tabbed Web Playground & Studio UI
+├── src/
+│   ├── models/
+│   │   └── catalogModel.js            # Catalog data layer, filters, and low-stock helpers
+│   ├── routes/
+│   │   └── catalogRoutes.js           # REST API routes (Catalog, Cart, Agent, Checkout, CRUD)
+│   ├── services/
+│   │   ├── aiExtractorService.js      # Attribute extraction, quality check & duplicate detection
+│   │   ├── analyticsService.js        # Dashboard metrics, top searches, conversions & stats
+│   │   ├── cartService.js             # Cart management, stock validation, taxes & discounts
+│   │   ├── cashfreeService.js         # Cashfree PG v2023-08-01 API client & webhook validator
+│   │   ├── catalogService.js          # NL query processing, explainable AI & comparison
+│   │   ├── comboService.js            # Curated product bundles & combo discount engine
+│   │   ├── fraudService.js            # Multi-vector risk assessment & price tamper defense
+│   │   ├── multiMerchantService.js    # Amazon, Flipkart & D2C live arbitrage aggregator
+│   │   ├── paymentService.js          # Autonomous multi-gateway payment router
+│   │   ├── razorpayService.js         # Razorpay API client, order creation & verification
+│   │   ├── securityService.js         # Price tamper verification & intelligent substitution
+│   │   └── shoppingAgentService.js    # Conversational shopping agent with execution trace
+│   └── utils/
+│       └── auditLogger.js             # Standardized event logger with UTC timestamps
+├── .env.example                       # Environment configuration template
+├── demo-agent.js                      # Automated 5-scenario demo script
+├── package.json                       # Dependencies and npm scripts
+├── server.js                          # Express server setup and static asset mounting
+└── README.md                          # Comprehensive project documentation
+```
+
+---
+
+## 🔮 Roadmap & Future Enhancements
+
+- 🌐 **Live Merchant Scraping & Official Partner APIs:** Transition mock multi-merchant endpoints to official Amazon Creator & Flipkart Affiliate APIs.
+- 🗣️ **Voice-Activated Agentic Shopping:** Web Audio API streaming to Whisper/Gemini for hands-free voice commerce.
+- 🤝 **Autonomous Agent-to-Merchant Negotiation:** Enable buyer agents to negotiate volume discounts with merchant seller agents within predefined policy bounds.
+- ⛓️ **x402 On-Chain Settlement:** Implement instant micro-settlements via UPI and web3 rails using the proposed HTTP 402 payment standard.
 
 ---
 
 ## 📄 License
-MIT
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🤝 Built With
-- **Node.js** + Express.js
-- **Razorpay Test APIs**
-- **Schema.org / JSON-LD**
-- **NPCI Protocol Standards** (UAP, ACP, AP2, x402)
+## 🤝 Built For
 
----
-
-**🚀 Submission for Razorpay AI Buildathon 2026**  
+**Razorpay AI Buildathon 2026**  
 **Track 1: AI Growth & Agentic Commerce | Path #2: Agent-Readable Catalog**  
-**Goal: ₹75K/month Paid Internship at Razorpay Bangalore (6-12 months)**
+*Demonstrating technical excellence, architectural rigor, and security-first design for autonomous commerce.*
